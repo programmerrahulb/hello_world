@@ -23,6 +23,11 @@ app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
 
+// Services page
+app.get('/services', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'services.html'));
+});
+
 // Contact page
 app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'contact.html'));
